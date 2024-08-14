@@ -1,0 +1,39 @@
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+
+  color: white;
+  font-size: larger;
+  font-weight: bolder;
+}
+.subtitle,
+.status {
+  color: #9ca3af;
+}
+.subtitle a {
+  font-weight: 600;
+  transition: color 300ms;
+}
+.subtitle a:hover {
+  color: white;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+}
+.status-ping {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  background-color: green;
+}
