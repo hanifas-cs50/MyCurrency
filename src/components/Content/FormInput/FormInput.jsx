@@ -1,8 +1,9 @@
 import SelectInput from "./SelectInput";
 
-const FormInput = () => {
+const FormInput = ({data}) => {
+  console.log(data);
   return (
-    <form action="" className="">
+    <form>
       <div className="input-group">
         <label>Amount</label>
         <input type="number" name="amount" id="amount" />

@@ -1,5 +1,3 @@
-import "./result.css"
-
 const Result = () => {
   return (
     <div className="result">

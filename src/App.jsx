@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Content from './components/Content/Content';
 import Header from './components/Header/Header';
 
@@ -22,10 +23,40 @@ const API_URL =
     : "http://localhost:5000";
 
 function App() {
+  const [data, setData] = useState([]);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  // fetch currencies
+  useEffect(() => {
+    async function getCurrencies() {
+      try {
+        const res = await fetch(`${API_URL}/currencies`);
+
+        if (!res.ok) {
+          throw new Error("Error Fetching Data ⛔");
+        }
+        const currencies = await res.json();
+        if (currencies.meta.code === 503) {
+          throw new Error("Service Unavailable");
+        }
+        setData(currencies.response);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    }
+    setError("");
+    getCurrencies();
+  }, []);
+
   return (
     <div className='app'>
       <Header />
-      <Content />
+      <Content data={data} />
     </div>
   )
 }

@@ -1,4 +1,3 @@
-import "./selectinput.css"
 import { useState, useEffect, useRef } from "react";
 
 const SelectInput = () => {
