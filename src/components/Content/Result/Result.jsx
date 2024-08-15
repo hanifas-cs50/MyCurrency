@@ -6,7 +6,7 @@ const Result = () => {
       <div className="before">
         5 US Dollar =
       </div>
-      <div className="after">
+      <div className="converted">
         <span className="symbol">
           Rp
         </span>

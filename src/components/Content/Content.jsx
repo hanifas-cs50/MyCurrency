@@ -1,6 +1,5 @@
-import FormInput from "../FormInput/FormInput";
-import Result from "../Result/Result";
-import "./content.css";
+import FormInput from "./FormInput/FormInput";
+import Result from "./Result/Result";
 
 const Content = () => {
   return (

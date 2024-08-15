@@ -1,8 +1,6 @@
-import "./top.css";
-
-const Top = () => {
+const Header = () => {
   return (
-    <div className="container top">
+    <div className="container header">
       <div>
         <div className="title">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="size-6">
@@ -24,4 +22,4 @@ const Top = () => {
   )
 };
 
-export default Top;
+export default Header;
