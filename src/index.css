@@ -87,7 +87,6 @@ input {
   height: 1rem;
   margin-right: 0.5rem;
   border-radius: 50%;
-  background-color: green;
 }
 
 /* CONTENT */
@@ -99,7 +98,7 @@ input {
   margin-top: 2rem;
 }
 
-/* FORM */
+/* FORM INPUT */
 
 form {
   width: 100%;
@@ -187,6 +186,19 @@ form {
   background-color: #9ca3af;
 }
 
+.convert-button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2rem;
+  background-color: rgb(59, 130, 246);
+  
+  color: white;
+  font-weight: bold;
+}
+.convert-button:hover {
+  background-color: rgba(59, 130, 246, 0.7);
+}
+
 /* SELECT INPUT */
 
 .select-placeholder,
@@ -254,7 +266,8 @@ form {
   
   border: 3px solid #27272a;
   background-color: rgba(39, 39, 42, 0.3);
-  overflow-y: auto;
+  word-break: break-all;
+  overflow-wrap: anywhere;
   
   /* font */
   color: #9ca3af;
@@ -267,4 +280,21 @@ form {
   font-size: 2rem;
   color: white;
   font-weight: bold;
+}
+
+.loading {
+  width: 2rem;
+  height: 2rem;
+  fill: white;
+  color: #9ca3af;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

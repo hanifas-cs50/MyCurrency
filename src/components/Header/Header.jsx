@@ -1,4 +1,4 @@
-const Header = () => {
+const Header = ({ status }) => {
   return (
     <div className="container header">
       <div>
@@ -15,7 +15,7 @@ const Header = () => {
       </div>
       
       <div className="status">
-        <div className="status-ping" />
+        <div className="status-ping" style={status ? {backgroundColor: "#16a34a"} : {backgroundColor: "#dc2626"}}/>
         <span>Connected</span>
       </div>
     </div>
