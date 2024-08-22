@@ -2,4 +2,4 @@
 
 #### Things left to do:
 - Search function for currencies
-- Make interface more responsive
+- ~~Make interface more responsive~~
